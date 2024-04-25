@@ -43,7 +43,7 @@ const Nav = () => {
 
      {user && <>
       <NavLink
-        to={"/update"}
+        to={"/additem"}
         className={({ isActive }) => (isActive ? "btn btn-ghost bg-violet-500 rounded-3xl " : "btn glass rounded-3xl border-none")}
       >
         Add Tourists Spot

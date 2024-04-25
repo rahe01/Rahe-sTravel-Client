@@ -10,7 +10,6 @@ const MainLayout = () => {
             <ToastContainer /> 
 
             <Nav></Nav>
-
             <Outlet></Outlet>
         </div>
     );
