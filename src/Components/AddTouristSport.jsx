@@ -9,9 +9,7 @@ const AddTouristSport = () => {
     const { user } = useContext(AuthContext);
 
     // Check if user exists before accessing its properties
-    const name =  user.displayName ;
-    const email =  user.email;
-    console.log(name, email)
+    
     
         const handleadd = (e) => {
             e.preventDefault();
@@ -36,8 +34,8 @@ const AddTouristSport = () => {
                 seasonality,
                 travelTime,
                 totalVisitorsPerYear,
-                name,
-                email
+                email: user?.email,
+                name : user?.name
                 
             }
             console.log(item);

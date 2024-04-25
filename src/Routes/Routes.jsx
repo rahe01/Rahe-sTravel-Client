@@ -8,6 +8,7 @@ import Register from "../Components/Register";
 import Error from "../Components/Error";
 import SecondLayout from "../Layout/SecondLayout";
 import AddTouristSport from "../Components/AddTouristSport";
+import PrivateRoute from "./PrivateRoutes";
 
   const router = createBrowserRouter([
     {
@@ -17,7 +18,8 @@ import AddTouristSport from "../Components/AddTouristSport";
       children: [
         {
             index: true,
-            element : <SecondLayout></SecondLayout>
+            element : <SecondLayout></SecondLayout>,
+            loader : () => fetch('http://localhost:5000/touristSports') 
         },
         {
             path: "/login",
@@ -29,8 +31,9 @@ import AddTouristSport from "../Components/AddTouristSport";
         },
         {
             path : '/additem',
-            element : <AddTouristSport></AddTouristSport>
-        }
+            element : <PrivateRoute><AddTouristSport></AddTouristSport></PrivateRoute>
+        },
+        
       ],
     },
   ]);
