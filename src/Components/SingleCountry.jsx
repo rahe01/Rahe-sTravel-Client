@@ -15,8 +15,7 @@ const SingleCountry = ({countrie}) => {
       <div className="card bg-base-100 shadow-xl">
         <figure>
           <img
-            src={image} // Assuming each place object has an 'image' property
-            // Assuming each place object has a 'touristsSpotName' property
+            src={image} 
             className="rounded-xl h-44 w-full object-cover"
           />
         </figure>
