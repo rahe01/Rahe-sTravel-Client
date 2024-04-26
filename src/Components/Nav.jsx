@@ -55,6 +55,12 @@ const Nav = () => {
       >
         My List
       </NavLink>
+      <NavLink
+        to={"/addcountry"}
+        className={({ isActive }) => (isActive ? "btn btn-ghost bg-violet-500 rounded-3xl " : "btn glass rounded-3xl border-none")}
+      >
+        Add Country
+      </NavLink>
      
      </>}
     </>
