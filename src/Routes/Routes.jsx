@@ -9,6 +9,7 @@ import Error from "../Components/Error";
 import SecondLayout from "../Layout/SecondLayout";
 import AddTouristSport from "../Components/AddTouristSport";
 import PrivateRoute from "./PrivateRoutes";
+import MyList from "../Components/MyList";
 
   const router = createBrowserRouter([
     {
@@ -33,6 +34,11 @@ import PrivateRoute from "./PrivateRoutes";
             path : '/additem',
             element : <PrivateRoute><AddTouristSport></AddTouristSport></PrivateRoute>
         },
+        {
+          path : '/mylist',
+          element : <PrivateRoute><MyList></MyList></PrivateRoute>,
+          
+        }
         
       ],
     },

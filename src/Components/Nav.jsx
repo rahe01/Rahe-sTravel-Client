@@ -9,6 +9,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 const Nav = () => {
   const { user, logOut } = useContext(AuthContext);
   const [showName, setShowName] = useState(false);
+ console.log(user?.photoURL)
 
   const handleMouseEnter = () => {
     setShowName(true);
@@ -49,7 +50,7 @@ const Nav = () => {
         Add Tourists Spot
       </NavLink>
       <NavLink
-        to={"/userprofile"}
+        to={"/mylist"}
         className={({ isActive }) => (isActive ? "btn btn-ghost bg-violet-500 rounded-3xl " : "btn glass rounded-3xl border-none")}
       >
         My List
@@ -111,7 +112,7 @@ const Nav = () => {
               <div className="w-10 rounded-full">
                 <img
                   alt="User Avatar"
-                  src={user?.photoUrl}
+                  src={user?.photoURL}
                 />
               </div>
               {showName && <span>{user.displayName}</span>}

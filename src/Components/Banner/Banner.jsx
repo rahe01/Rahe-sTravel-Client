@@ -34,13 +34,11 @@ export default function Banner() {
             " data-aos="fade-right" data-aos-duration="1000"
               >
                 We make your <br />{" "}
-                <span className="text-3xl md:text-6xl ">Dream House</span>
+                <span className="text-3xl md:text-6xl ">Dreams come true</span>
               </h1>
 
               <p className="text-base-300 px-5 md:px-10 text-lg md:text-2xl" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000">
-                Furthermore, townhouses often feature private outdoor spaces
-                such as patios or balconies, providing residents with
-                opportunities for relaxation and outdoor enjoyment.
+               
               </p>
               <div className="pl-5 md:pl-10">
                 <button className="btn btn-ghost bg-violet-600 rounded-3xl">
@@ -68,13 +66,11 @@ export default function Banner() {
             "
               >
                 We make your <br />{" "}
-                <span className="text-3xl md:text-6xl">Dream House</span>
+                <span className="text-3xl md:text-6xl">Dreams come true</span>
               </h1>
 
               <p className="text-base-300 px-5 md:px-10 text-lg md:text-2xl">
-                Furthermore, townhouses often feature private outdoor spaces
-                such as patios or balconies, providing residents with
-                opportunities for relaxation and outdoor enjoyment.
+                
               </p>
               <div className="pl-5 md:pl-10">
                 <button className="btn btn-ghost bg-violet-600 rounded-3xl">
@@ -102,13 +98,11 @@ export default function Banner() {
             "
               >
                 We make your <br />{" "}
-                <span className="text-3xl md:text-6xl">Dream House</span>
+                <span className="text-3xl md:text-6xl">Dreams come true</span>
               </h1>
 
               <p className="text-base-300 px-5 md:px-10 text-lg md:text-2xl">
-                Furthermore, townhouses often feature private outdoor spaces
-                such as patios or balconies, providing residents with
-                opportunities for relaxation and outdoor enjoyment.
+                
               </p>
               <div className="pl-5 md:pl-10">
                 <button className="btn btn-ghost bg-violet-600 rounded-3xl">
