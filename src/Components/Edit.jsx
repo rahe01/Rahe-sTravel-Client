@@ -21,7 +21,7 @@ const Edit = () => {
   } = spot;
 
   useEffect(() => {
-    fetch(`http://localhost:5000/tourist/${id}`)
+    fetch(`https://a10-server-beta.vercel.app/tourist/${id}`)
       .then((res) => res.json())
       .then((data) => setspot(data));
   }, [id]);
@@ -56,7 +56,7 @@ const Edit = () => {
     }
     console.log(item);
 
-   fetch(`http://localhost:5000/touristsss/${id}`, {
+   fetch(`https://a10-server-beta.vercel.app/touristsss/${id}`, {
        method: 'PUT',
        headers: {
            'content-type': 'application/json'

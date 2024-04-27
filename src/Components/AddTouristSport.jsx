@@ -40,7 +40,7 @@ const AddTouristSport = () => {
             }
             console.log(item);
 
-            fetch('http://localhost:5000/addtouristSports', {
+            fetch('https://a10-server-beta.vercel.app/addtouristSports', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

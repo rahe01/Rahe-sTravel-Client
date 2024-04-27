@@ -10,7 +10,7 @@ const AllTourist = () => {
     const fetchAndSortData = async () => {
       try {
         
-        const response = await fetch("http://localhost:5000/sortTourist"); 
+        const response = await fetch("https://a10-server-beta.vercel.app/sortTourist"); 
         if (!response.ok) {
           throw new Error("Failed to fetch data");
         }

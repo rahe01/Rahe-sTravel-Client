@@ -5,7 +5,7 @@ const Country = () => {
     const [countries, setCountries] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/countryyy', {
+        fetch('https://a10-server-beta.vercel.app/countryyy', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'

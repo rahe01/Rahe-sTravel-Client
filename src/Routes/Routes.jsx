@@ -23,7 +23,7 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <SecondLayout></SecondLayout>,
-        loader: () => fetch("http://localhost:5000/touristSports"),
+        loader: () => fetch("https://a10-server-beta.vercel.app/touristSports"),
       },
       {
         path: "/login",
@@ -51,7 +51,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/touristSports/:id",
-        loader: ({params}) => fetch(`http://localhost:5000/tourist/${params.id}`),
+        loader: ({params}) => fetch(`https://a10-server-beta.vercel.app/tourist/${params.id}`),
         element: (
           <PrivateRoute>
             <ViewDetails></ViewDetails>
@@ -70,11 +70,11 @@ const router = createBrowserRouter([
       {
         path: '/alltouristitem',
         element: <AllTourist></AllTourist>,
-        loader: () => fetch("http://localhost:5000/touristSports"),
+        loader: () => fetch("https://a10-server-beta.vercel.app/touristSports"),
       },
       {
         path: '/country/:country',
-        loader: ({params}) => fetch(`http://localhost:5000/countryyyy/${params.country}`),
+        loader: ({params}) => fetch(`https://a10-server-beta.vercel.app/countryyyy/${params.country}`),
         element: <SpeaceficCountry></SpeaceficCountry>
       },
       {

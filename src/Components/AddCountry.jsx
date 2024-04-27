@@ -16,7 +16,7 @@ const AddCountry = () => {
             image
         }
         console.log(item);
-        fetch('http://localhost:5000/addcountry', {
+        fetch('https://a10-server-beta.vercel.app/addcountry', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

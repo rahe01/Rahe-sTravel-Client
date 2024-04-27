@@ -11,7 +11,7 @@ const MyList = () => {
     useEffect(() => {
         // Make sure user exists before making the request
         if (user && user.email) {
-            fetch(`http://localhost:5000/touristSports/${user?.email}`)
+            fetch(`https://a10-server-beta.vercel.app/touristSports/${user?.email}`)
                 .then((res) => res.json())
                 .then((data) => {
                     setMyList(data);
