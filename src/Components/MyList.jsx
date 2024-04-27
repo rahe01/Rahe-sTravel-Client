@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
+import MylistTable from "./MylistTable";
 
 
 const MyList = () => {
@@ -28,18 +29,21 @@ const MyList = () => {
 
 
     return (
-        <div>
+        <div className="container mx-auto">
             <h1>My List</h1>
+      <table className="table table-zebra">
+      <thead>
+      <tr className="flex justify-between">
+        <th></th>
+        <th>Sopt Name</th>
+        <th>Country</th>
+        <th>Seasonality</th>
+      </tr>
+    </thead>
+      </table>
             {
-                myList.map((item) => {
-                    return (
-                        <div key={item._id}>
-                            <h2>{item.image}</h2>
-                            <p>{item.description}</p>
-                            <p>{item.email}</p>
-                        </div>
-                    );
-                })
+                myList.map((item) => <MylistTable key={item._id} item={item}></MylistTable>)
+                 
             }
         </div>
     );

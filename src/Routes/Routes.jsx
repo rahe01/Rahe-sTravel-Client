@@ -9,6 +9,7 @@ import PrivateRoute from "./PrivateRoutes";
 import MyList from "../Components/MyList";
 import ViewDetails from "../Components/ViewDetails";
 import AddCountry from "../Components/AddCountry";
+import Edit from "../Components/Edit";
 
 const router = createBrowserRouter([
   {
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
       {
         path : '/addcountry',
         element : <PrivateRoute><AddCountry></AddCountry></PrivateRoute>
+      },
+      {
+        path: '/edit/:id',
+        element: <PrivateRoute><Edit></Edit></PrivateRoute>
       }
     ],
   },
