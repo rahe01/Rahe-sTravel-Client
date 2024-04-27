@@ -1,10 +1,23 @@
 
 import { useLoaderData } from "react-router-dom";
+import { FaCommentDollar } from "react-icons/fa";
+import { FaMagnifyingGlassLocation } from "react-icons/fa6";
+import { WiDaySunnyOvercast } from "react-icons/wi";
+import { LuCalendarDays } from "react-icons/lu";
+import { FaPeopleGroup } from "react-icons/fa6";
 
 const ViewDetails = () => {
     
-    const data = useLoaderData(); // Fetch the data using useLoaderData hook
-    const { image, touristsSpotName, country_Name, shortDescription } = data; // Destructure data object
+    const data = useLoaderData(); 
+    const {  image,
+        touristsSpotName,
+        country_Name,
+        location,
+        shortDescription,
+        averageCost,
+        seasonality,
+        travelTime,
+        totalVisitorsPerYear,} = data; 
 
     // Render the details of the tourist spot
     return (
@@ -12,14 +25,20 @@ const ViewDetails = () => {
             <div className="card bg-base-100 shadow-xl">
                 <figure>
                     <img
-                        src={image} // Assuming each place object has an 'image' property
-                        alt={touristsSpotName} // Assuming each place object has a 'touristsSpotName' property
+                        src={image} 
+                        alt={touristsSpotName}
                         className="rounded-xl h-44 w-full object-cover"
                     />
                 </figure>
                 <div className="p-6">
                     <p className="text-2xl font-bold">{touristsSpotName}</p>
-                    <p className="text-gray-500 mt-2">{country_Name}</p>
+                    <p className="flex items-center gap-2"> <FaMagnifyingGlassLocation /> {location}</p>
+                    <p className="">{country_Name}</p>
+                    <p className="flex items-center gap-2"> <FaCommentDollar /> {averageCost}</p>
+                    <p className="flex items-center gap-2"> <WiDaySunnyOvercast /> {seasonality}</p>
+                    <p className="flex items-center gap-2">  <LuCalendarDays></LuCalendarDays>{travelTime}</p>
+                    <p className="flex items-center gap-2"> <FaPeopleGroup /> {totalVisitorsPerYear}</p>
+                    
                     <p className="mt-4">{shortDescription}</p>
                 </div>
                 <div className="card-actions flex justify-center pb-6">

@@ -1,6 +1,6 @@
 const Offer = () => {
   return (
-    <section className="p-4 my-6 md:p-8 dark:bg-gray-100 dark:text-gray-800 container mx-auto my-10">
+    <section className="p-4 md:p-8  container mx-auto my-10">
       <div className="container grid grid-cols-1 gap-6 m-4 mx-auto md:m-0 md:grid-cols-2 xl:grid-cols-3">
         <div className="flex overflow-hidden rounded-lg dark:bg-gray-50 dark:text-gray-800">
           <div className="flex items-center justify-center px-4 dark:bg-violet-600 dark:text-gray-100">

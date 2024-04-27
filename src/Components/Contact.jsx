@@ -1,16 +1,41 @@
 import { Helmet } from "react-helmet";
+import { Typewriter } from 'react-simple-typewriter'
+
 
 const Contact = () => {
-    return (
-        <div>
-            <div>
+
+  
+
+  const handleDone = () => {
+    console.log(`Done after 5 loops!`);
+  }
+
+  return (
+    <div>
       <Helmet>
         <title>Contact</title>
       </Helmet>
       <section className="py-6 ">
         <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
           <div className="py-6 md:py-0 md:px-6">
-            <h1 className="text-4xl font-bold animate__animated animate__tada">Contact Details</h1>
+            <h1 className="text-4xl font-bold animate__animated animate__tada">Contact {''}
+            
+            <span style={{ color: 'red', fontWeight: 'bold' }}>
+          {/* Style will be inherited from the parent element */}
+          <Typewriter
+            words={['Us', 'Me']}
+            loop={5}
+            cursor
+            cursorStyle='_'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+            onLoopDone={handleDone}
+            
+          />
+        </span>
+            
+            </h1>
             <p className="pt-2 pb-4">
               If you have any questions, just fill in the contact form, and we
               will answer you shortly. If you are living nearby, come visit our
@@ -61,46 +86,45 @@ const Contact = () => {
           
           <div>
             <h1 className="text-4xl font-bold pl-5 animate__animated animate__wobble">Get in touch</h1>
-          <form
-            noValidate=""
-            className="flex flex-col py-6 space-y-6 md:py-0 md:px-6"
-          >
-            <label className="block">
-              <span className="mb-1 text-base">Full name</span>
-              <input
-                type="text"
-                placeholder="Enter your full name"
-                className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-400 focus:dark:ring-violet-600 bg-gray-800 dark:bg-gray-100 h-10 text-lg px-2"
-              />
-            </label>
-            <label className="block">
-              <span className="mb-1 text-base">Email address</span>
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-400 focus:dark:ring-violet-600 bg-gray-800 dark:bg-gray-100 h-10 text-lg px-2"
-              />
-            </label>
-            <label className="block">
-              <span className="mb-1 text-base">Message</span>
-              <textarea
-                rows="3"
-                className="block w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 focus:dark:ring-violet-600 bg-gray-800 dark:bg-gray-100 px-2"
-              ></textarea>
-            </label>
-            <button
-              type="button"
-              className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 bg-violet-400 dark:bg-violet-600 text-gray-900 dark:text-gray-50 focus:ring-violet-400 focus:dark:ring-violet-600 hover:ring-violet-400 hover:dark:ring-violet-600"
+            <form
+              noValidate=""
+              className="flex flex-col py-6 space-y-6 md:py-0 md:px-6"
             >
-              Submit
-            </button>
-          </form>
+              <label className="block">
+                <span className="mb-1 text-base">Full name</span>
+                <input
+                  type="text"
+                  placeholder="Enter your full name"
+                  className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-400 focus:dark:ring-violet-600 bg-gray-800 dark:bg-gray-100 h-10 text-lg px-2"
+                />
+              </label>
+              <label className="block">
+                <span className="mb-1 text-base">Email address</span>
+                <input
+                  type="email"
+                  placeholder="Enter your email address"
+                  className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-400 focus:dark:ring-violet-600 bg-gray-800 dark:bg-gray-100 h-10 text-lg px-2"
+                />
+              </label>
+              <label className="block">
+                <span className="mb-1 text-base">Message</span>
+                <textarea
+                  rows="3"
+                  className="block w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 focus:dark:ring-violet-600 bg-gray-800 dark:bg-gray-100 px-2"
+                ></textarea>
+              </label>
+              <button
+                type="button"
+                className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 bg-violet-400 dark:bg-violet-600 text-gray-900 dark:text-gray-50 focus:ring-violet-400 focus:dark:ring-violet-600 hover:ring-violet-400 hover:dark:ring-violet-600"
+              >
+                Submit
+              </button>
+            </form>
           </div>
         </div>
       </section>
     </div>
-        </div>
-    );
+  );
 };
 
 export default Contact;

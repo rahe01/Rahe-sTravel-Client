@@ -11,6 +11,8 @@ import ViewDetails from "../Components/ViewDetails";
 import AddCountry from "../Components/AddCountry";
 import Edit from "../Components/Edit";
 import AllTourist from "../Components/AllTourist";
+import SpeaceficCountry from "../Components/SpeaceficCountry";
+import Contact from "../Components/Contact";
 
 const router = createBrowserRouter([
   {
@@ -69,6 +71,15 @@ const router = createBrowserRouter([
         path: '/alltouristitem',
         element: <AllTourist></AllTourist>,
         loader: () => fetch("http://localhost:5000/touristSports"),
+      },
+      {
+        path: '/country/:country',
+        loader: ({params}) => fetch(`http://localhost:5000/countryyyy/${params.country}`),
+        element: <SpeaceficCountry></SpeaceficCountry>
+      },
+      {
+        path: '/contact',
+        element: <Contact></Contact>
       }
     ],
   },
