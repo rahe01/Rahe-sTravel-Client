@@ -10,6 +10,7 @@ import MyList from "../Components/MyList";
 import ViewDetails from "../Components/ViewDetails";
 import AddCountry from "../Components/AddCountry";
 import Edit from "../Components/Edit";
+import AllTourist from "../Components/AllTourist";
 
 const router = createBrowserRouter([
   {
@@ -63,6 +64,11 @@ const router = createBrowserRouter([
       {
         path: '/edit/:id',
         element: <PrivateRoute><Edit></Edit></PrivateRoute>
+      },
+      {
+        path: '/alltouristitem',
+        element: <AllTourist></AllTourist>,
+        loader: () => fetch("http://localhost:5000/touristSports"),
       }
     ],
   },

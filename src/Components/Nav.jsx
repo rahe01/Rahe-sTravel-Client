@@ -36,7 +36,7 @@ const Nav = () => {
         Home
       </NavLink>
 
-      <NavLink to={"/about"} className={({ isActive }) => (isActive ? "btn btn-ghost bg-violet-500 rounded-3xl " : "btn glass rounded-3xl border-none")}>
+      <NavLink to={"/alltouristitem"} className={({ isActive }) => (isActive ? "btn btn-ghost bg-violet-500 rounded-3xl " : "btn glass rounded-3xl border-none")}>
 
       All Tourists Spot
       </NavLink>
