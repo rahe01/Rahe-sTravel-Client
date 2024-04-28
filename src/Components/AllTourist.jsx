@@ -37,8 +37,8 @@ const AllTourist = () => {
 
   return (
     <div>
-      <div className="navbar-center hidden lg:flex justify-center ">
-        <ul className="menu menu-horizontal px-1">
+      <div className="navbar-center  lg:flex  justify-center ">
+        <ul className="menu menu-horizontal px-1 z-[20] ">
           <li>
             <details>
               <summary>Sort</summary>
