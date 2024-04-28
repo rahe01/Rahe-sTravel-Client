@@ -1,15 +1,13 @@
 
-// Import Swiper React components
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Fade } from "react-awesome-reveal";
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 
 import './banner.css';
 
-// import required modules
 import { Pagination } from 'swiper/modules';
 import { Link } from "react-router-dom";
 
@@ -32,7 +30,7 @@ export default function Banner() {
           className='text-3xl p-5 md:p-10 font-bold text-center  px-5 md:px-10'
           
               >
-                <Fade>Explore </Fade> <br />{" "}
+                <Fade>Explore </Fade> <br />
                 <span className="text-3xl md:text-6xl ">the Beauty of Bali</span>
               </h1>
 
@@ -42,7 +40,7 @@ export default function Banner() {
               <div className="pl-5 md:pl-10">
                 <button className="btn btn-ghost bg-violet-600 rounded-3xl">
                   Book Now
-                </button>{" "}
+                </button>
               <Link to={"/contact"}>  <button className="btn btn-ghost bg-violet-600 rounded-3xl">
                   Contact Us
                 </button></Link>
@@ -62,7 +60,7 @@ export default function Banner() {
             className='text-3xl p-5 md:p-10 font-bold text-center  px-5 md:px-10'
           
               >
-                Experience e<br />{" "}
+                Experience e<br />
                 <span className="text-3xl md:text-6xl ">Langkawi Island Paradis</span>
               </h1>
 
@@ -72,7 +70,7 @@ export default function Banner() {
               <div className="pl-5 md:pl-10">
                 <button className="btn btn-ghost bg-violet-600 rounded-3xl">
                   Book Now
-                </button>{" "}
+                </button>
               <Link to={"/contact"}>  <button className="btn btn-ghost bg-violet-600 rounded-3xl">
                   Contact Us
                 </button></Link>
@@ -91,7 +89,7 @@ export default function Banner() {
           
           className='text-3xl p-5 md:p-10 font-bold text-center  px-5 md:px-10'
               >
-               Discover  <br />{" "}
+               Discover  <br />
                 <span className="text-3xl md:text-6xl ">the Charm of Ho Chi Minh City</span>
               </h1>
 
@@ -101,7 +99,7 @@ export default function Banner() {
               <div className="pl-5 md:pl-10">
                 <button className="btn btn-ghost bg-violet-600 rounded-3xl">
                   Book Now
-                </button>{" "}
+                </button>
               <Link to={"/contact"}>  <button className="btn btn-ghost bg-violet-600 rounded-3xl">
                   Contact Us
                 </button></Link>
