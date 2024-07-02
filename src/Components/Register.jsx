@@ -30,7 +30,7 @@ const Register = () => {
   const handleRegister = (e) => {
     e.preventDefault();
 
-    // Password validation
+   
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
     if (!passwordRegex.test(formData.password)) {
       toast.error(
@@ -39,7 +39,6 @@ const Register = () => {
       return;
     }
 
-    // Create user
     createUser(formData.email, formData.password)
       .then((result) => {
         console.log(result.user);
